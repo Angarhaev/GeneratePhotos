@@ -13,3 +13,7 @@ venv/
 # Исключить файлы в каталоге temp и его подкаталогах
 temp/
 images/
+/get_data/tmp/
+/handlers/pay_handler.py
+.idea
+__pycache__

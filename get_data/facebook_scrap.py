@@ -64,7 +64,7 @@ async def scrape_url(url, config):
             page.get_text()
             img = page.find_all('img')
             img_links = [i_img.get('src') for i_img in img]
-            #print(img_links)
+
 
             #аватар
             image_tags = page.find_all('image')
@@ -77,7 +77,6 @@ async def scrape_url(url, config):
                 'link_image': image_links[1],
                 'link_background': img_links[1]
             }
-            #print(scrap_dict)
 
             return scrap_dict
 
