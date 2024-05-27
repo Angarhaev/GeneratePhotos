@@ -17,8 +17,7 @@ async def start_handler(message: Message, keyboards_instance: KeyboardsCreate, r
     """Стартовый хэндлер при запуске бота. Пользователь получает стартовую gif и клавиатуру для дальнейших действий"""
     reply_kb = await ReplyButtonsCreate.create_reply()
     await message.delete()
-    text = ('😈 <b>INTIMATES</b> <i>is a neural network trained to search for intimate photos, videos, deleted '
-            'correspondence of girls in social networks.</i>')
+    text = ('😈 <b>INTIMATES</b> <i>is a neural network trained to search for photos</i>')
     await message.bot.send_animation(chat_id=message.chat.id,
                                      animation='CgACAgIAAxkBAAMGZfBKm0Jcl5pVy4GWw_UsO5DPfngAAvY_AAIZwnlLrHwvn2FVYog0BA',
                                      caption=text,
@@ -36,7 +35,6 @@ async def start_handler(message: Message, keyboards_instance: KeyboardsCreate, r
 async def start_handler(callback: CallbackQuery, keyboards_instance: KeyboardsCreate, state: FSMContext):
     """Стартовый хэндлер. Тоже самое. Активируетя при нажатии кнопки нразад в следующем меню, т.е. ловит колбэк."""
     await callback.message.delete()
-    text = ('😈 <b>INTIMATES</b> <i>is a neural network trained to search for intimate photos, videos, deleted '
-            'correspondence of girls in social networks.</i>')
+    text = ('😈 <b>INTIMATES</b> <i>is a neural network trained to search for photos.</i>')
     await callback.message.answer('_________________Menu_________________:', reply_markup=keyboards_instance.keyboard_start)
     await state.set_state(AlSettings.start)

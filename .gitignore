@@ -10,6 +10,10 @@ venv/
 # Исключить файл .env
 .env
 
-# Исключить файлы в каталоге temp и его подкаталогах
+Папки
 temp/
 images/
+tmp/
+/handlers/pay_handler.py
+.idea
+__pycache__
